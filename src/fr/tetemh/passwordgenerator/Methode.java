@@ -9,13 +9,7 @@ public class Methode {
                         " | ||  __/ ||  __/ | | | | | | | |\n" +
                         "  \\__\\___|\\__\\___|_| |_| |_|_| |_|\n" +
                         "                                  \n" +
-                        "\n" +
                         "\n";
         System.out.println(pseudo);
     }
-
-    public static void print(String args) {
-        System.out.print(args);
-    }
-
 }
