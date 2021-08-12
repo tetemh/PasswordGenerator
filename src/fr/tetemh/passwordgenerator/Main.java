@@ -81,7 +81,7 @@ public class Main {
 
             //TODO sout mdp
             StringBuilder mdp = new StringBuilder();
-            while (true) {
+            while (!(a.isEmpty() && b.isEmpty() && c.isEmpty())) {
                 int random = (int) (Math.random() * 3);
 
                 int tablettre = a.size();
@@ -93,23 +93,20 @@ public class Main {
                 int tableChar = c.size();
                 int randomTableChar = (int) (Math.random() * tableChar);
 
-                if(random == 0 && questionLetters.equalsIgnoreCase("y")){
+                if (random == 0 && questionLetters.equalsIgnoreCase("y") && !a.isEmpty()) {
                     mdp.append(a.get(randomTabLettre));
                     a.remove(randomTabLettre);
-                }
-
-                if(random == 1 && questionNumbers.equalsIgnoreCase("y")) {
+                }else if (random == 1 && questionNumbers.equalsIgnoreCase("y") && !b.isEmpty()) {
                     mdp.append(b.get(randomTableNumber));
                     b.remove(randomTableNumber);
-                }
-
-                if(random == 2 && questionCharSpaces.equalsIgnoreCase("y")) {
+                }else if (random == 2 && questionCharSpaces.equalsIgnoreCase("y") && !c.isEmpty()) {
                     mdp.append(c.get(randomTableChar));
                     c.remove(randomTableChar);
                 }
-                System.out.println(mdp);
+
             }
 
+            System.out.println(mdp);
 
         }
     }
